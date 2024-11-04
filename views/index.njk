@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/semantic.css"/>
+    <link rel="stylesheet" href="/styles.css"/>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tea roulette</h1>
+    <p>Enter the first persons preferences</p>
+    <form id="tea-form">
+      <label for="tea-type">Drink of choice</label>
+      <input value="Green Tea" name="drink" id="tea-type" placeholder="enter your choice" type="text"/>
+      <label for="sugar-level">Sugar? *enter a number*</label>
+      <input value="6" name="sugar" id="sugar-level" placeholder="enter your choice" type="number"/>
+      <label for="milk-level">Milk? *type yes or no*</label>
+      <input value="Yes" name="milk" id="milk-level" placeholder="enter your choice" type="text"/>
+      <label for="user-name">Persons name</label>
+      <input value="Jo" name="name" id="user-name" placeholder="enter your choice" type="text"/>
+      <button type="submit">Submit</button>
+    </form>
+    {% for user in res %}
+      <p>{{ user.user.drink }}</p>
+    {% endfor %}
+  </body>
+</html>
